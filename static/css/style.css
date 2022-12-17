@@ -1,0 +1,92 @@
+.topbar {
+   background-color: #0b2a6e;
+   text-align: center;
+   height: 30px;
+   color: white;
+   font-size: 36px;
+   overflow: hidden;
+   padding-bottom: 20px;
+   padding-top: 0px;
+}
+
+body {
+   margin: 0px;
+   background-color: #E28E39;
+}
+
+.page-body {
+   margin-right: 200px;
+   margin-left: 200px;
+}
+
+.topbar p {
+   margin: 0px;
+}
+
+.top_block {
+   background-color: #FDF4DC;
+   color: black;
+}
+
+.top_block p {
+   margin: 0px;
+   font-size: larger;
+   padding: 40px;
+   text-align: justify;
+}
+
+.bouton_block {
+   padding-right: 20%;
+   padding-left: 20%;
+   display: flexbox;
+   text-align: center;
+   background-color: #FDF4DC;
+}
+
+.bouton_block a {
+   text-decoration: none;
+}
+
+.bouton_adoption {
+   background-color: #2B4162;
+   height: 45px;
+   display: inline-block;
+   margin-left: 1%;
+   margin-right: 1%;
+   margin-bottom: 10px;
+   border: 1px solid white;
+   border-radius: 20px;
+   width: 170px;
+}
+
+.bouton_adoption p {
+   color: white;
+   font-size: 18px;
+   font-weight: bold;
+   text-align: center;
+   padding: 10px;
+   margin: 0px;
+}
+
+.searchbar_block {
+   display: flexbox;
+   background-color: #FDF4DC;
+   padding: 20px;
+   justify-content: center;
+}
+
+.searchbar_block p {
+   color: black;
+   font-size: 30px;
+   text-align: center;
+}
+
+.searchbar {
+   width: 100%;
+   text-align: center;
+}
+
+.searchbar input {
+   width: 65%;
+   height: 20px;
+}

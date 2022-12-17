@@ -1,4 +1,4 @@
-# Copyright 2022 <Votre nom et code permanent>
+# Copyright 2022 Gwendal Delisle-Arnold DELG67030105
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 
 from flask import Flask
 from flask import render_template
+from flask import request
 from flask import g
 from .database import Database
 
@@ -34,7 +35,6 @@ def close_connection(exception):
         db.disconnect()
 
 
-@app.route('/')
-def form():
-    # À remplacer par le contenu de votre choix.
-    return render_template('form.html')
+@app.route('/', methods=["GET", "POST"])
+def index():
+    return render_template('index.html')

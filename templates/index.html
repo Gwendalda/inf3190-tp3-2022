@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Adoption.</title>
+{% endblock %}
+{% block body %}
+<div class="page-body">
+   <div class="top_block">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+         magna aliqua. Mattis aliquam faucibus purus in massa tempor nec. Nam libero justo laoreet sit. Cras adipiscing
+         enim eu turpis egestas pretium. Rhoncus dolor purus non enim praesent elementum. Magna sit amet purus gravida.
+         Neque vitae tempus quam pellentesque nec nam. Vel facilisis volutpat est velit egestas dui. Eu augue ut lectus
+         arcu bibendum at varius vel pharetra. Pellentesque nec nam aliquam sem et tortor consequat id porta.</p>
+   </div>
+   <div class="bouton_block">
+      <div class="bouton_adoption">
+         <a href="/adopter">
+            <p> Adopter</p>
+         </a>
+      </div>
+      <div class="bouton_adoption">
+         <a href="/faire_adopter">
+            <p> Faire Adopter</p>
+         </a>
+      </div>
+   </div>
+   <div class="searchbar_block">
+      <p>Trouvez votre animal !</p>
+      <div class="searchbar">
+         <input type="search" id="search" name="recherche" placeholder="Cherchez une annonce.">
+      </div>
+   </div>
+   <div class="animal_block">
+      <div class="animal_table">
+         {% for animal in animalList %}
+         <a>
+            <div class="animal_post">
+               <img class="animal_picture">
+               <p class="name"></p>
+               <p class="description"></p>
+            </div>
+         </a>
+         {% endfor %}
+      </div>
+   </div>
+</div>
+
+{% endblock %}
