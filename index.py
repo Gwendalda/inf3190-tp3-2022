@@ -37,4 +37,12 @@ def close_connection(exception):
 
 @app.route('/', methods=["GET", "POST"])
 def index():
+    if request.method == "GET":
+        db = Database()
+        db.get_connection()
+        animalList = db.get_animaux()
+        tableList = []
+        for i in range(0, len(animalList), 3):
+            tableList.append(animalList[i:i+3])
+        return render_template('index.html', tableList=tableList)
     return render_template('index.html')
