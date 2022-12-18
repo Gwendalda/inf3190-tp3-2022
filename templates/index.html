@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block head %}
 <title>Adoption.</title>
+
 {% endblock %}
 {% block body %}
 <div class="page-body">
@@ -31,17 +32,37 @@
    </div>
    <div class="animal_block">
       <div class="animal_table">
-         {% for animal in animalList %}
-         <a>
-            <div class="animal_post">
-               <img class="animal_picture">
-               <p class="name"></p>
-               <p class="description"></p>
-            </div>
-         </a>
-         {% endfor %}
-      </div>
-   </div>
+        <table >
+          
+          <tr> {% for animal in animalList %}
+          
+            <td><a>
+            
+           <div class="card">
+             <img src="https://assets.mira.ca/images/_carousellarge/Credit-photo-Maude-Fortin.jpg" alt="Animal image" class="card-image">
+             <div class="card-content">
+               <h2 class="card-title">{{animal.nom}}</h2>
+               <p class="card-description">{{animal.description}}</p>
+             </div>
+     
+     
+           </div>
+          
+             
+          </a></td>
+          
+          {% endfor %}</tr>
+         
+          
+
+        </table>
+        
+    </div>
+
+
+      
+    
+   
 </div>
 
 {% endblock %}
