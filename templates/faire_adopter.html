@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Faire Adopter</title>
+{% endblock %}
+{% block body %}
+
+<form method="POST" action="/valider" class="AnimalInformation">
+   <label for="name">Nom de l'Animal:</label><br>
+   <input type="text" id="name" name="name" minlength="3" maxlength="20" pattern="[^,]+" required><br>
+   <label for="species">Espece:</label><br>
+   <input type="text" id="species" name="species" pattern="[^,]+" required><br>
+   <label for="race">Race:</label><br>
+   <input type="text" id="race" name="race" pattern="[^,]+" required><br>
+   <label for="age">Age:</label><br>
+   <input type="number" id="age" name="age" min="0" max="30" required><br>
+   <label for="description">Description:</label><br>
+   <textarea id="description" name="description" pattern="[^,]+" required></textarea><br>
+   <label for="email">Courriel:</label><br>
+   <input type="email" id="email" name="email" required><br>
+   <label for="address-street">Adresse (rue):</label><br>
+   <input type="text" id="address-street" name="address-street" pattern="[^,]+" required><br>
+   <label for="address-city">Adresse (Ville):</label><br>
+   <input type="text" id="address-city" name="address-city" pattern="[^,]+" required><br>
+   <label for="address-street">Adresse (Code Postal):</label><br>
+   <input type="text" id="address-postal" name="address-postal" pattern="[A-Za-z][0-9][A-Za-z] ?[0-9][A-Za-z][0-9]"
+      required><br>
+   <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}

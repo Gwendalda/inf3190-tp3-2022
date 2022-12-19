@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Info Animal</title>
+{% endblock %}
+{% block body %}
+<h1>Animal Information</h1>
+<section class="AnimalInformation">
+   <h2>Nom de l'animal: {{animal.nom}}</h2>
+   <h3>Nom du proprietaire: John Smith</h3>
+   <p>Description: Fluffy is a friendly and playful cat. She loves chasing toys and snuggling up with her human
+      family.</p>
+   <h4>Espece: {{animal.espece}}</h4>
+   <h4>Race: {{animal.race}}</h4>
+   <h4>Age: {{animal.age}}</h4>
+   <h4>Adresse : {{animal.adresse}}</h4>
+   <h4>Code postal: {{animal.cp}}</h4>
+   <h4>Ville: {{animal.ville}}</h4>
+   <div class="bouton_adoption">
+      <a href="mailto:{{animal.courriel}}">
+         <p> Adopter</p>
+      </a>
+   </div>
+</section>
+
+
+{% endblock %}
